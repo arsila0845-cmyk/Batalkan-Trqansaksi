@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Task Manager</h1>
+            <p>Organize your tasks efficiently</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Add a new task..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="btn btn-add">Add Task</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Total:</span>
+                <span class="stat-value" id="totalTasks">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Completed:</span>
+                <span class="stat-value" id="completedTasks">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Pending:</span>
+                <span class="stat-value" id="pendingTasks">0</span>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div id="taskList" class="task-list">
+            <!-- Tasks will be added here dynamically -->
+        </div>
+
+        <div class="empty-state" id="emptyState">
+            <p>🎉 No tasks yet! Add one to get started.</p>
+        </div>
+
+        <div class="action-buttons">
+            <button id="clearBtn" class="btn btn-secondary">Clear Completed</button>
+            <button id="deleteAllBtn" class="btn btn-danger">Delete All</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
